@@ -1,0 +1,144 @@
+<style>
+body {
+  width: 80%;
+  margin: 30px auto;
+  font-family: sans-serif;
+}
+
+h3 {
+  text-align: center;
+  font-size: 1.65em;
+  margin: 0 0 30px;
+}
+
+div {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+a {
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  margin-right: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+a:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 50em) {
+  a {
+    width: calc(25% - 6px);
+  }
+  
+  a:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+  
+  a:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+
+a:hover img {
+  transform: scale(1.15);
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+figcaption {
+  margin-top: 15px;
+}
+
+img {
+  border: none;
+  max-width: 50%;
+  max-height: 50%;
+  display: block;
+  background: #ccc;
+  transition: transform .2s ease-in-out;
+}
+
+.p a {
+  display: inline;
+  font-size: 13px;
+  margin: 0;
+  text-decoration: underline;
+  color: blue;
+}
+
+.p {
+  text-align: center;
+  font-size: 13px;
+  padding-top: 100px;
+}
+</style>
+<h3>Ahlul HDRC</h3>
+
+
+<div>
+  <a href="">
+    <figure>
+      <img src="bob.jpeg" alt="">
+      <figcaption>
+        Bob
+      </figcaption>
+    </figure>
+  </a>
+  <a href="">
+    <figure>
+      <img src="rose.jpeg" alt="">
+      <figcaption>
+        Rusli
+      </figcaption>
+    </figure>
+  </a>
+  <a href="">
+    <figure>
+      <img src="aliencem.jpeg" alt="">
+      <figcaption>
+        Ali
+      </figcaption>
+    </figure>
+  </a>
+  <a href="">
+    <figure>
+      <img src="ajimencem.jpeg" alt="">
+      <figcaption>
+        Ajim
+      </figcaption>
+    </figure>
+  </a>
+  <a href="">
+    <figure>
+      <img src="ajib.jpeg" alt="">
+      <figcaption>
+       Ajib
+      </figcaption>
+    </figure>
+  </a>
+  <a href="">
+    <figure>
+      <img src="zamm.jpeg" alt="">
+      <figcaption>
+       erzamm
+      </figcaption>
+    </figure>
+  </a>
+  <a href="">
+    <figure>
+      <img src="bob.jpeg" alt="">
+       <figcaption>
+        Bob lagi
+      </figcaption>
+    </figure>
+  </a>
+ </div>
+
+<p class="p">Demo by George Martsoukos. <a href="http://www.sitepoint.com/using-modern-css-to-build-a-responsive-image-grid/" target="_blank">See article</a>.</p>
