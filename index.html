@@ -22,6 +22,15 @@
   display: table;
   clear: both;
 }
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: dimgrey;
+   color: white;
+   text-align: center;
+}
 </style>
 
 
@@ -94,28 +103,78 @@
  	    <button onclick="plus1Team1()">+1</button>
       <button onclick="minus1Team1()">-1</button>
       <p id="skorTeam1Display"></p>
-
-  
   </div>
-    <div class="column" style="background-color:#aaa;">
-      <img id="team2" src="ayam.jpeg" height="50%">
-      <p id="player1team2"></p>
-    </div>
-    <div class="column" style="background-color:#aaa;">
-      <img id="team1" src="ayam.jpeg" height="50%">
-      <p id="player2team2"></p>
-    </div>
+
+
+  <div class="column" style="background-color:#aaa;">
+    <h3>KIRI</h3>
+    <img id="player1Team2Img" src="ayam.jpeg" width="100%" height="50%">
+    <p id="player1Team2p"></p>
+    <select id="playersList3">
+      <option value="1">bob</option>
+      <option value="2">aliencem</option>
+      <option value="3">aish</option>
+       <option value="4">acik</option>
+      <option value="5">aizham</option>
+      <option value="6">ajib</option>
+       <option value="7">ajimencem</option>
+      <option value="8">alim</option>
+      <option value="9">dugong</option>
+       <option value="10">gmon</option>
+      <option value="11">hafni</option>
+      <option value="12">icam</option>
+       <option value="13">jaa</option>
+      <option value="14">juna</option>
+      <option value="15">leman</option>
+       <option value="16">pokcik</option>
+      <option value="17">nuor</option>
+      <option value="18">haji</option>
+       <option value="19">zamm</option>
+      <option value="20">suaropen</option>
+      <option value="21">aish</option>
+      <option value="22">rose</option>
+      <option value="23">abt</option>
+    </select>
+    <button onclick="displayPlayer1Team2Img()">Pick</button>
+  </div>
+
+
   <div class="column" style="background-color:#ddd;">
+    <h3>KANAN</h3>
+    <img id="player2Team2Img" src="ayam.jpeg" width="100%" height="50%">
+    <p id="player2Team2p"></p>
+    <select id="playersList4">
+      <option value="1">bob</option>
+      <option value="2">aliencem</option>
+      <option value="3">aish</option>
+       <option value="4">acik</option>
+      <option value="5">aizham</option>
+      <option value="6">ajib</option>
+       <option value="7">ajimencem</option>
+      <option value="8">alim</option>
+      <option value="9">dugong</option>
+       <option value="10">gmon</option>
+      <option value="11">hafni</option>
+      <option value="12">icam</option>
+       <option value="13">jaa</option>
+      <option value="14">juna</option>
+      <option value="15">leman</option>
+       <option value="16">pokcik</option>
+      <option value="17">nuor</option>
+      <option value="18">haji</option>
+       <option value="19">zamm</option>
+      <option value="20">suaropen</option>
+      <option value="21">aish</option>
+      <option value="22">rose</option>
+      <option value="23">abt</option>
+    </select>
+    <button onclick="displayPlayer2Team2Img()">Pick</button>
+  </div>
+  <div class="column" style="background-color:#bbb;">
     <h2>TEAM B</h2>
-    <button onclick="plus1Team2()">+1</button>
-    	<button onclick="minus1Team2()">-1</button>
+      <button onclick="plus1Team2()">+1</button>
+      <button onclick="minus1Team2()">-1</button>
       <p id="skorTeam2Display"></p>
-      <select id="playersList">
-        <option value="1">bob</option>
-        <option value="2">aliencem</option>
-        <option value="3">aish</option>
-      </select>
-  <button onclick="displayPlayerImg()">Pick</button>
   </div>
 </div>
 
@@ -157,12 +216,26 @@ function displayPlayer2Team1Img(){
   document.getElementById("player2Team1p").innerHTML = text;
   document.getElementById("player2Team1Img").src = text + ".jpeg";
 }
+function displayPlayer1Team2Img(){
+  var e = document.getElementById("playersList3");
+  var text = e.options[e.selectedIndex].text;
+  document.getElementById("player1Team2p").innerHTML = text;
+  document.getElementById("player1Team2Img").src = text + ".jpeg";
+}
+function displayPlayer2Team2Img(){
+  var e = document.getElementById("playersList4");
+  var text = e.options[e.selectedIndex].text;
+  document.getElementById("player2Team2p").innerHTML = text;
+  document.getElementById("player2Team2Img").src = text + ".jpeg";
+}
 skorTeam1 = 0;
 skorTeam2 = 0;
 
 </script>
 
-<a href="members.html"> Members</a>
-<p>Powered by Github Pages</p>
+<div class="footer">
+  <a href="members.html"> Members</a>
+  <p>Powered by Github Pages</p>
+</div>
 </body>
 </html>
