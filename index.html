@@ -49,6 +49,66 @@
   </div>
 </div>
 
+<div id="members">
+  <div class="row">
+    <div class="column" >
+      <img src="bob.jpeg" height="20%">
+      <p>Bob</p>
+    </div>
+    <div class="column" >
+      <img src="aish.jpeg" height="20%">
+      <p>Aish Lee Jr.</p>
+    </div>
+    <div class="column" >
+      <img src="ajib.jpeg" height="20%">
+      <p>Ajib</p>
+    </div>
+    <div class="column" >
+      <img src="aliencem.jpeg" height="20%">
+      <p>Ali</p>
+    </div>
+    <div class="column" >
+      <img src="ajimencem.jpeg" height="20%">
+      <p>Ajim</p>
+    </div>
+    <div class="column" >
+      <img src="rose.jpeg" height="20%">
+      <p>Rusli</p>
+    </div>
+    <div class="column" >
+      <img src="aizham.jpeg" height="20%">
+      <p>Aizham</p>
+    </div>
+    <div class="column" >
+      <img src="alim.jpeg" height="20%">
+      <p>Alim KudaPadi</p>
+    </div>
+    <div class="column" >
+      <img src="gmon.jpeg" height="20%">
+      <p>G-mon</p>
+    </div>
+    <div class="column" >
+      <img src="leman.jpeg" height="20%">
+      <p>Leman</p>
+    </div>
+    <div class="column" >
+      <img src="hafni.jpeg" height="20%">
+      <p>Hafni</p>
+    </div>
+    <div class="column" >
+      <img src="pokcik.jpeg" height="20%">
+      <p>Pokcik</p>
+    </div>
+    <div class="column" >
+      <img src="juna.png" height="20%">
+      <p>Chow Jun Na</p>
+    </div>
+    <div class="column" >
+      <img src="nuor.jpeg" height="20%">
+      <p>NuoSpital</p>
+    </div>
+  </div>
+</div>
 
 <script>
 function plus1Team1() {
@@ -66,6 +126,14 @@ function plus1Team2() {
 function minus1Team2() {
   skorTeam2 -= 1;
   document.getElementById("skorTeam2Display").innerHTML = skorTeam2;
+}
+function hideMembers() {
+  var x = document.getElementById("membersDiv");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
 
 skorTeam1 = 0;
