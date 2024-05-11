@@ -97,9 +97,9 @@ function toggleViewPlayers() {
 }
 function displayPlayerImg(){
   var e = document.getElementById("playersList");
-  var text = e.options[e.selectedIndex].text + ".jpeg";
+  var text = e.options[e.selectedIndex].text;
   document.getElementById("player1team1").innerHTML = text;
-  document.getElementById("team1").src = text;
+  document.getElementById("team1").src = text + ".jpeg";
 }
 skorTeam1 = 0;
 skorTeam2 = 0;
