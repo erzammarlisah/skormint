@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>HDRC skormint liga laga-laga v.1tupid (version satupid...stupid... got it,ayis? hihihi!) </h1>
+<h1>LIGA Pasca Syawal</h1>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 *{
@@ -25,12 +25,12 @@
 </style>
 
 
-
 <div class="row">
   <div class="column" style="background-color:#aaa;">
-    <img id="team1" src="ayam.jpeg" width="100%" height="50%">
-    <p id="player1team1"></p>
-    <select id="playersList">
+    <h3>KIRI</h3>
+    <img id="player1Team1Img" src="ayam.jpeg" width="100%" height="50%">
+    <p id="player1Team1p"></p>
+    <select id="playersList1">
       <option value="1">bob</option>
       <option value="2">aliencem</option>
       <option value="3">aish</option>
@@ -55,12 +55,39 @@
       <option value="22">rose</option>
       <option value="23">abt</option>
     </select>
-    <button onclick="displayPlayerImg()">Pick</button>
+    <button onclick="displayPlayer1Team1Img()">Pick</button>
   </div>
 
   <div class="column" style="background-color:#aaa;">
-    <img id="team1" src="ayam.jpeg" height="50%">
-    <p id="player2team1"></p>
+    <h3>KANAN</h3>
+    <img id="player2Team1Img" src="ayam.jpeg" width="100%" height="50%">
+    <p id="player2Team1p"></p>
+    <select id="playersList2">
+      <option value="1">bob</option>
+      <option value="2">aliencem</option>
+      <option value="3">aish</option>
+       <option value="4">acik</option>
+      <option value="5">aizham</option>
+      <option value="6">ajib</option>
+       <option value="7">ajimencem</option>
+      <option value="8">alim</option>
+      <option value="9">dugong</option>
+       <option value="10">gmon</option>
+      <option value="11">hafni</option>
+      <option value="12">icam</option>
+       <option value="13">jaa</option>
+      <option value="14">juna</option>
+      <option value="15">leman</option>
+       <option value="16">pokcik</option>
+      <option value="17">nuor</option>
+      <option value="18">haji</option>
+       <option value="19">zamm</option>
+      <option value="20">suaropen</option>
+      <option value="21">aish</option>
+      <option value="22">rose</option>
+      <option value="23">abt</option>
+    </select>
+    <button onclick="displayPlayer2Team1Img()">Pick</button>
   </div>
   <div class="column" style="background-color:#bbb;">
     <h2>TEAM A</h2>
@@ -118,11 +145,17 @@ function toggleViewPlayers() {
     x.style.display = "none";
   }
 }
-function displayPlayerImg(){
-  var e = document.getElementById("playersList");
+function displayPlayer1Team1Img(){
+  var e = document.getElementById("playersList1");
   var text = e.options[e.selectedIndex].text;
-  document.getElementById("player1team1").innerHTML = text;
-  document.getElementById("team1").src = text + ".jpeg";
+  document.getElementById("player1Team1p").innerHTML = text;
+  document.getElementById("player1Team1Img").src = text + ".jpeg";
+}
+function displayPlayer2Team1Img(){
+  var e = document.getElementById("playersList2");
+  var text = e.options[e.selectedIndex].text;
+  document.getElementById("player2Team1p").innerHTML = text;
+  document.getElementById("player2Team1Img").src = text + ".jpeg";
 }
 skorTeam1 = 0;
 skorTeam2 = 0;
