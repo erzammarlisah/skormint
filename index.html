@@ -11,9 +11,9 @@
 /* Create four equal columns that floats next to each other */
 .column {
   float: left;
-  width: 25%;
-  padding: 10px;
-  height: 80vh; /* Should be removed. Only for demonstration */
+  width: 16%;
+  padding: 5px;
+  height: 50vh; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -28,89 +28,47 @@
 
 <div class="row">
   <div class="column" style="background-color:#aaa;">
-    <h2>TEAM A</h2>
     <img id="team1" src="ayam.jpeg" height="80%">
-    <p>ayam/oren</p>
+    <p id="player1team1"></p>
+  </div>
+  <div class="column" style="background-color:#aaa;">
+    <img id="team1" src="ayam.jpeg" height="80%">
+    <p id="player2team1"></p>
   </div>
   <div class="column" style="background-color:#bbb;">
- 	<button onclick="plus1Team1()">+1</button>
-	<button onclick="minus1Team1()">-1</button>
-	<p id="skorTeam1Display"></p>
+    <h2>TEAM A</h2>
+ 	    <button onclick="plus1Team1()">+1</button>
+      <button onclick="minus1Team1()">-1</button>
+      <p id="skorTeam1Display"></p>
+    <select id="playersList">
+        <option value="1">bob</option>
+        <option value="2">aliencem</option>
+        <option value="3">aish</option>
+    </select>
+  <button onclick="displayPlayerImg()">Pick</button>
   </div>
-  <div class="column" style="background-color:#ccc;">
-     <h2>TEAM B</h2>
-     <img id="team1" src="ayam.jpeg" height="80%">
-     <p>ayam/oren</p>
-  </div>
+    <div class="column" style="background-color:#aaa;">
+      <img id="team2" src="ayam.jpeg" height="80%">
+      <p id="player1team2"></p>
+    </div>
+    <div class="column" style="background-color:#aaa;">
+      <img id="team1" src="ayam.jpeg" height="80%">
+      <p id="player2team2"></p>
+    </div>
   <div class="column" style="background-color:#ddd;">
-	<button onclick="plus1Team2()">+1</button>
+    <h2>TEAM B</h2>
+    <button onclick="plus1Team2()">+1</button>
     	<button onclick="minus1Team2()">-1</button>
-	<p id="skorTeam2Display"></p>
+      <p id="skorTeam2Display"></p>
+      <select id="playersList">
+        <option value="1">bob</option>
+        <option value="2">aliencem</option>
+        <option value="3">aish</option>
+      </select>
+  <button onclick="displayPlayerImg()">Pick</button>
   </div>
 </div>
 
-<button onclick="toggleViewPlayers()">Players</button>
-
-<div id="membersDiv">
-  <div class="row">
-    <div class="column" >
-      <img src="bob.jpeg" height="20%">
-      <p>Bob</p>
-    </div>
-    <div class="column" >
-      <img src="aish.jpeg" height="20%">
-      <p>Aish Lee Jr.</p>
-    </div>
-    <div class="column" >
-      <img src="ajib.jpeg" height="20%">
-      <p>Ajib</p>
-    </div>
-    <div class="column" >
-      <img src="aliencem.jpeg" height="20%">
-      <p>Ali</p>
-    </div>
-    <div class="column" >
-      <img src="ajimencem.jpeg" height="20%">
-      <p>Ajim</p>
-    </div>
-    <div class="column" >
-      <img src="rose.jpeg" height="20%">
-      <p>Rusli</p>
-    </div>
-    <div class="column" >
-      <img src="aizham.jpeg" height="20%">
-      <p>Aizham</p>
-    </div>
-    <div class="column" >
-      <img src="alim.jpeg" height="20%">
-      <p>Alim KudaPadi</p>
-    </div>
-    <div class="column" >
-      <img src="gmon.jpeg" height="20%">
-      <p>G-mon</p>
-    </div>
-    <div class="column" >
-      <img src="leman.jpeg" height="20%">
-      <p>Leman</p>
-    </div>
-    <div class="column" >
-      <img src="hafni.jpeg" height="20%">
-      <p>Hafni</p>
-    </div>
-    <div class="column" >
-      <img src="pokcik.jpeg" height="20%">
-      <p>Pokcik</p>
-    </div>
-    <div class="column" >
-      <img src="juna.png" height="20%">
-      <p>Chow Jun Na</p>
-    </div>
-    <div class="column" >
-      <img src="nuor.jpeg" height="20%">
-      <p>NuoSpital</p>
-    </div>
-  </div>
-</div>
 
 <script>
 function plus1Team1() {
@@ -137,9 +95,15 @@ function toggleViewPlayers() {
     x.style.display = "none";
   }
 }
-
+function displayPlayerImg(){
+  var e = document.getElementById("playersList");
+  var text = e.options[e.selectedIndex].text + ".jpeg";
+  document.getElementById("player1team1").innerHTML = text;
+  document.getElementById("team1").src = text;
+}
 skorTeam1 = 0;
 skorTeam2 = 0;
+
 </script>
 
 <a href="members.html"> Members</a>
