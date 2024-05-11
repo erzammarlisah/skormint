@@ -49,7 +49,9 @@
   </div>
 </div>
 
-<div id="members">
+<button onclick="toggleViewPlayers()">Players</button>
+
+<div id="membersDiv">
   <div class="row">
     <div class="column" >
       <img src="bob.jpeg" height="20%">
@@ -127,7 +129,7 @@ function minus1Team2() {
   skorTeam2 -= 1;
   document.getElementById("skorTeam2Display").innerHTML = skorTeam2;
 }
-function hideMembers() {
+function toggleViewPlayers() {
   var x = document.getElementById("membersDiv");
   if (x.style.display === "none") {
     x.style.display = "block";
