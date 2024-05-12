@@ -28,7 +28,7 @@
 <div class="row">
   <div class="column" style="background-color:#aaa;">
     <h3>KIRI</h3>
-    <img id="player1Team1Img" src="ayam.jpeg" width="100%" height="50%">
+    <img id="leftPlayerTeam1Img" src="ayam.jpeg" width="100%" height="50%">
     <p id="player1Team1p"></p>
     <select id="playersList1">
       <option value="1">bob</option>
@@ -60,7 +60,7 @@
 
   <div class="column" style="background-color:#aaa;">
     <h3>KANAN</h3>
-    <img id="player2Team1Img" src="ayam.jpeg" width="100%" height="50%">
+    <img id="rightPlayerTeam1Img" src="ayam.jpeg" width="100%" height="50%">
     <p id="player2Team1p"></p>
     <select id="playersList2">
       <option value="1">bob</option>
@@ -99,7 +99,7 @@
 
   <div class="column" style="background-color:#aaa;">
     <h3>KIRI</h3>
-    <img id="player1Team2Img" src="ayam.jpeg" width="100%" height="50%">
+    <img id="leftPlayerTeam2Img" src="ayam.jpeg" width="100%" height="50%">
     <p id="player1Team2p"></p>
     <select id="playersList3">
       <option value="1">bob</option>
@@ -132,7 +132,7 @@
 
   <div class="column" style="background-color:#ddd;">
     <h3>KANAN</h3>
-    <img id="player2Team2Img" src="ayam.jpeg" width="100%" height="50%">
+    <img id="rightPlayerTeam2Img" src="ayam.jpeg" width="100%" height="50%">
     <p id="player2Team2p"></p>
     <select id="playersList4">
       <option value="1">bob</option>
@@ -175,8 +175,12 @@ function plus1Team1() {
   skorTeam1 += 1;
   document.getElementById("skorTeam1Display").innerHTML = skorTeam1;
   /* now change player position*/
-
+  var leftPlayer = document.getElementById("leftPlayerTeam1Img").src; 
+  var rightPlayer = document.getElementById("rightPlayerTeam1Img").src;
+  document.getElementById("leftPlayerTeam1Img").src = rightPlayer;
+  document.getElementById("rightPlayerTeam1Img").src = leftPlayer;
 }
+
 function minus1Team1() {
   skorTeam1 -= 1;
   document.getElementById("skorTeam1Display").innerHTML = skorTeam1;
@@ -184,6 +188,11 @@ function minus1Team1() {
 function plus1Team2() {
   skorTeam2 += 1;
   document.getElementById("skorTeam2Display").innerHTML = skorTeam2;
+  /* now change player position*/
+  var leftPlayer = document.getElementById("leftPlayerTeam2Img").src; 
+  var rightPlayer = document.getElementById("rightPlayerTeam2Img").src;
+  document.getElementById("leftPlayerTeam2Img").src = rightPlayer;
+  document.getElementById("rightPlayerTeam2Img").src = leftPlayer;
 }
 function minus1Team2() {
   skorTeam2 -= 1;
@@ -201,26 +210,34 @@ function displayPlayer1Team1Img(){
   var e = document.getElementById("playersList1");
   var text = e.options[e.selectedIndex].text;
   document.getElementById("player1Team1p").innerHTML = text;
-  document.getElementById("player1Team1Img").src = text + ".jpeg";
+  document.getElementById("leftPlayerTeam1Img").src = text + ".jpeg";
+  player1Team1 = document.getElementById("leftPlayerTeam1Img").src;
 }
 function displayPlayer2Team1Img(){
   var e = document.getElementById("playersList2");
   var text = e.options[e.selectedIndex].text;
   document.getElementById("player2Team1p").innerHTML = text;
-  document.getElementById("player2Team1Img").src = text + ".jpeg";
+  document.getElementById("rightPlayerTeam1Img").src = text + ".jpeg";
+  player2Team1 = document.getElementById("rightPlayerTeam1Img").src;
 }
 function displayPlayer1Team2Img(){
   var e = document.getElementById("playersList3");
   var text = e.options[e.selectedIndex].text;
   document.getElementById("player1Team2p").innerHTML = text;
-  document.getElementById("player1Team2Img").src = text + ".jpeg";
+  document.getElementById("leftPlayerTeam2Img").src = text + ".jpeg";
+  player1Team2 = document.getElementById("leftPlayerTeam2Img").src;
 }
 function displayPlayer2Team2Img(){
   var e = document.getElementById("playersList4");
   var text = e.options[e.selectedIndex].text;
   document.getElementById("player2Team2p").innerHTML = text;
-  document.getElementById("player2Team2Img").src = text + ".jpeg";
+  document.getElementById("rightPlayerTeam2Img").src = text + ".jpeg";
+  player2Team2 = document.getElementById("rightPlayerTeam2Img").src;
 }
+player1Team1 = "bob.jpeg";
+player2Team1 = "bob.jpeg";
+player1Team2 = "ayam.jpeg";
+player2Team2 = "bob.jpeg";
 skorTeam1 = 0;
 skorTeam2 = 0;
 
