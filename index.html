@@ -27,6 +27,18 @@
   font-size: 56px;
   background-color: royalblue;
 }
+.bigButton{
+  background-color: #04AA6D;
+  border: none;
+  color: white;
+  padding: 40px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 32px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
 </style>
 
 
@@ -96,7 +108,7 @@
   </div>
   <div class="column" style="background-color:#bbb;">
     <h2>TEAM A</h2>
- 	    <button onclick="plus1Team1()">+1</button>
+ 	    <button class="bigButton" onclick="plus1Team1()">+1</button>
       <button onclick="minus1Team1()">-1</button>
       <p class="scoreDisplay" id="skorTeam1Display">0</p>
   </div>
@@ -168,9 +180,9 @@
   </div>
   <div class="column" style="background-color:#bbb;">
     <h2>TEAM B</h2>
-      <button onclick="plus1Team2()">+1</button>
+      <button class="bigButton" onclick="plus1Team2()">+1</button>
       <button onclick="minus1Team2()">-1</button>
-      <p id="skorTeam2Display">0</p>
+      <p class="scoreDisplay" id="skorTeam2Display">0</p>
   </div>
 </div>
 
@@ -189,6 +201,10 @@ function plus1Team1() {
 function minus1Team1() {
   skorTeam1 -= 1;
   document.getElementById("skorTeam1Display").innerHTML = skorTeam1;
+  var leftPlayer = document.getElementById("leftPlayerTeam1Img").src; 
+  var rightPlayer = document.getElementById("rightPlayerTeam1Img").src;
+  document.getElementById("leftPlayerTeam1Img").src = rightPlayer;
+  document.getElementById("rightPlayerTeam1Img").src = leftPlayer;
 }
 function plus1Team2() {
   skorTeam2 += 1;
@@ -202,6 +218,10 @@ function plus1Team2() {
 function minus1Team2() {
   skorTeam2 -= 1;
   document.getElementById("skorTeam2Display").innerHTML = skorTeam2;
+  var leftPlayer = document.getElementById("leftPlayerTeam2Img").src; 
+  var rightPlayer = document.getElementById("rightPlayerTeam2Img").src;
+  document.getElementById("leftPlayerTeam2Img").src = rightPlayer;
+  document.getElementById("rightPlayerTeam2Img").src = leftPlayer;
 }
 function toggleViewPlayers() {
   var x = document.getElementById("membersDiv");
