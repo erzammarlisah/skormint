@@ -194,6 +194,10 @@ function plus1Team1() {
   /* now change player position if serving*/
   if(team1Serving)
   {
+    var leftPlayerName = document.getElementById("player1Team1p").innerHTML;
+    var rightPlayerName = document.getElementById("player2Team1p").innerHTML;
+    document.getElementById("player1Team1p").innerHTML = rightPlayerName;
+    document.getElementById("player2Team1p").innerHTML = leftPlayerName;
     var leftPlayer = document.getElementById("leftPlayerTeam1Img").src; 
     var rightPlayer = document.getElementById("rightPlayerTeam1Img").src;
     document.getElementById("leftPlayerTeam1Img").src = rightPlayer;
