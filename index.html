@@ -191,11 +191,16 @@
 function plus1Team1() {
   skorTeam1 += 1;
   document.getElementById("skorTeam1Display").innerHTML = skorTeam1;
-  /* now change player position*/
-  var leftPlayer = document.getElementById("leftPlayerTeam1Img").src; 
-  var rightPlayer = document.getElementById("rightPlayerTeam1Img").src;
-  document.getElementById("leftPlayerTeam1Img").src = rightPlayer;
-  document.getElementById("rightPlayerTeam1Img").src = leftPlayer;
+  /* now change player position if serving*/
+  if(team1Serving)
+  {
+    var leftPlayer = document.getElementById("leftPlayerTeam1Img").src; 
+    var rightPlayer = document.getElementById("rightPlayerTeam1Img").src;
+    document.getElementById("leftPlayerTeam1Img").src = rightPlayer;
+    document.getElementById("rightPlayerTeam1Img").src = leftPlayer;
+  }
+  team1Serving = true;
+  team2Serving = false;
 }
 
 function minus1Team1() {
@@ -209,11 +214,16 @@ function minus1Team1() {
 function plus1Team2() {
   skorTeam2 += 1;
   document.getElementById("skorTeam2Display").innerHTML = skorTeam2;
-  /* now change player position*/
-  var leftPlayer = document.getElementById("leftPlayerTeam2Img").src; 
-  var rightPlayer = document.getElementById("rightPlayerTeam2Img").src;
-  document.getElementById("leftPlayerTeam2Img").src = rightPlayer;
-  document.getElementById("rightPlayerTeam2Img").src = leftPlayer;
+  /* now change player position if serving*/
+  if(team2Serving)
+  {
+    var leftPlayer = document.getElementById("leftPlayerTeam2Img").src; 
+    var rightPlayer = document.getElementById("rightPlayerTeam2Img").src;
+    document.getElementById("leftPlayerTeam2Img").src = rightPlayer;
+    document.getElementById("rightPlayerTeam2Img").src = leftPlayer;
+  }
+  team2Serving = true;
+  team1Serving = false;
 }
 function minus1Team2() {
   skorTeam2 -= 1;
@@ -265,6 +275,8 @@ player1Team2 = "ayam.jpeg";
 player2Team2 = "bob.jpeg";
 skorTeam1 = 0;
 skorTeam2 = 0;
+team1Serving = true;
+team2Serving = false;
 
 </script>
 
