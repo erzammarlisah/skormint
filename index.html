@@ -209,6 +209,10 @@ function plus1Team1() {
 
 function minus1Team1() {
   skorTeam1 -= 1;
+  var leftPlayerName = document.getElementById("player1Team1p").innerHTML;
+  var rightPlayerName = document.getElementById("player2Team1p").innerHTML;
+  document.getElementById("player1Team1p").innerHTML = rightPlayerName;
+  document.getElementById("player2Team1p").innerHTML = leftPlayerName;
   document.getElementById("skorTeam1Display").innerHTML = skorTeam1;
   var leftPlayer = document.getElementById("leftPlayerTeam1Img").src; 
   var rightPlayer = document.getElementById("rightPlayerTeam1Img").src;
@@ -221,6 +225,10 @@ function plus1Team2() {
   /* now change player position if serving*/
   if(team2Serving)
   {
+    var leftPlayerName = document.getElementById("player1Team2p").innerHTML;
+    var rightPlayerName = document.getElementById("player2Team2p").innerHTML;
+    document.getElementById("player1Team2p").innerHTML = rightPlayerName;
+    document.getElementById("player2Team2p").innerHTML = leftPlayerName;
     var leftPlayer = document.getElementById("leftPlayerTeam2Img").src; 
     var rightPlayer = document.getElementById("rightPlayerTeam2Img").src;
     document.getElementById("leftPlayerTeam2Img").src = rightPlayer;
@@ -231,6 +239,10 @@ function plus1Team2() {
 }
 function minus1Team2() {
   skorTeam2 -= 1;
+  var leftPlayerName = document.getElementById("player1Team2p").innerHTML;
+  var rightPlayerName = document.getElementById("player2Team2p").innerHTML;
+  document.getElementById("player1Team2p").innerHTML = rightPlayerName;
+  document.getElementById("player2Team2p").innerHTML = leftPlayerName;
   document.getElementById("skorTeam2Display").innerHTML = skorTeam2;
   var leftPlayer = document.getElementById("leftPlayerTeam2Img").src; 
   var rightPlayer = document.getElementById("rightPlayerTeam2Img").src;
