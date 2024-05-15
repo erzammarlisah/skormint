@@ -119,6 +119,7 @@
     <div class="TeamLabel" id="TeamALabel"><h2>TEAM A</h2></div>
  	    <button class="bigButton" onclick="plus1Team1()">+1</button>
       <button onclick="minus1Team1()">-1</button>
+      <button onclick="teamAServes()">this team serves</button>
       <p class="scoreDisplay" id="skorTeam1Display">0</p>
   </div>
 
@@ -191,6 +192,7 @@
     <div class="TeamLabel" id="TeamBLabel"><h2>TEAM B</h2></div>
       <button class="bigButton" onclick="plus1Team2()">+1</button>
       <button onclick="minus1Team2()">-1</button>
+      <button onclick="teamBServes()">this team serves</button>
       <p class="scoreDisplay" id="skorTeam2Display">0</p>
   </div>
 </div>
@@ -299,6 +301,18 @@ function displayPlayer2Team2Img(){
   document.getElementById("player2Team2p").innerHTML = text;
   document.getElementById("rightPlayerTeam2Img").src = text + ".jpeg";
   player2Team2 = document.getElementById("rightPlayerTeam2Img").src;
+}
+function teamAServes(){
+  team1Serving = true;
+  document.getElementById("TeamALabel").style.background = "forestgreen";
+  team2Serving = false;
+  document.getElementById("TeamBLabel").style.background = "grey";
+}
+function teamBServes(){
+  team2Serving = true;
+  document.getElementById("TeamBLabel").style.background = "forestgreen";
+  team1Serving = false;
+  document.getElementById("TeamALabel").style.background = "grey";
 }
 player1Team1 = "bob.jpeg";
 player2Team1 = "bob.jpeg";
