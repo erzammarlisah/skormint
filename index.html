@@ -56,7 +56,7 @@
     <div class="title"><p><b>KIRI</b></p></div>
     <img id="leftPlayerTeam1Img" src="ayam.jpeg" width="100%" height="50%">
     <p id="player1Team1p"></p>
-    <select id="playersList1">
+    <select id="playersList1" onchange="displayPlayer1Team1Img()">
       <option value="1">bob</option>
       <option value="2">ali</option>
       <option value="3">aish</option>
@@ -83,14 +83,14 @@
       <option value="24">norham</option>
       <option value="25">bain</option>
     </select>
-    <button onclick="displayPlayer1Team1Img()">Pick</button>
+    <button onclick="swapPositionTeam1()">Tukar Posisi</button>
   </div>
 
   <div class="column" style="background-color:#aaa;">
     <div class="title"><p><b>KANAN</b></p></div>
     <img id="rightPlayerTeam1Img" src="ayam.jpeg" width="100%" height="50%">
     <p id="player2Team1p"></p>
-    <select id="playersList2">
+    <select id="playersList2" onchange="displayPlayer2Team1Img()">
        <option value="1">bob</option>
       <option value="2">ali</option>
       <option value="3">aish</option>
@@ -117,7 +117,7 @@
       <option value="24">norham</option>
       <option value="25">bain</option>
     </select>
-    <button onclick="displayPlayer2Team1Img()">Pick</button>
+    <!-- <button onclick="displayPlayer2Team1Img()">Pick</button> -->
   </div>
   <div class="column" style="background-color:#bbb;">
     <div class="TeamLabel" id="TeamALabel"><h2>TEAM A</h2></div>
@@ -132,7 +132,7 @@
     <div class="title"><p><b>KIRI</b></p></div>
     <img id="leftPlayerTeam2Img" src="ayam.jpeg" width="100%" height="50%">
     <p id="player1Team2p"></p>
-    <select id="playersList3">
+    <select id="playersList3" onchange="displayPlayer1Team2Img()">
       <option value="1">bob</option>
       <option value="2">ali</option>
       <option value="3">aish</option>
@@ -159,7 +159,7 @@
       <option value="24">norham</option>
       <option value="25">bain</option>
     </select>
-    <button onclick="displayPlayer1Team2Img()">Pick</button>
+    <button onclick="swapPositionTeam2()">Tukar Posisi</button>
   </div>
 
 
@@ -167,7 +167,7 @@
     <div class="title"><p><b>KANAN</b></p></div>
     <img id="rightPlayerTeam2Img" src="ayam.jpeg" width="100%" height="50%">
     <p id="player2Team2p"></p>
-    <select id="playersList4">
+    <select id="playersList4" onchange="displayPlayer2Team2Img()">
       <option value="1">bob</option>
       <option value="2">ali</option>
       <option value="3">aish</option>
@@ -321,6 +321,26 @@ function teamBServes(){
   document.getElementById("TeamBLabel").style.background = "forestgreen";
   team1Serving = false;
   document.getElementById("TeamALabel").style.background = "grey";
+}
+function swapPositionTeam1(){
+  var leftPlayerName = document.getElementById("player1Team1p").innerHTML;
+  var rightPlayerName = document.getElementById("player2Team1p").innerHTML;
+  document.getElementById("player1Team1p").innerHTML = rightPlayerName;
+  document.getElementById("player2Team1p").innerHTML = leftPlayerName;
+  var leftPlayer = document.getElementById("leftPlayerTeam1Img").src; 
+  var rightPlayer = document.getElementById("rightPlayerTeam1Img").src;
+  document.getElementById("leftPlayerTeam1Img").src = rightPlayer;
+  document.getElementById("rightPlayerTeam1Img").src = leftPlayer;
+}
+function swapPositionTeam2(){
+  var leftPlayerName = document.getElementById("player1Team2p").innerHTML;
+  var rightPlayerName = document.getElementById("player2Team2p").innerHTML;
+  document.getElementById("player1Team2p").innerHTML = rightPlayerName;
+  document.getElementById("player2Team2p").innerHTML = leftPlayerName;
+  var leftPlayer = document.getElementById("leftPlayerTeam2Img").src; 
+  var rightPlayer = document.getElementById("rightPlayerTeam2Img").src;
+  document.getElementById("leftPlayerTeam2Img").src = rightPlayer;
+  document.getElementById("rightPlayerTeam2Img").src = leftPlayer;
 }
 player1Team1 = "bob.jpeg";
 player2Team1 = "bob.jpeg";
