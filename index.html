@@ -87,7 +87,7 @@
       <option value="24">norham</option>
       <option value="25">bain</option>
     </select>
-    <div class="row"><button class="buttonTukar" onclick="swapPositionTeam1()"><==></button></div>
+    <div class="row"><button class="buttonTukar" onclick="swapPositionTeam1()">Tukar</button></div>
   </div>
 
 
@@ -164,7 +164,7 @@
       <option value="24">norham</option>
       <option value="25">bain</option>
     </select>
-    <div class="row"><button class="buttonTukar" onclick="swapPositionTeam2()"><==></button></div>
+    <div class="row"><button class="buttonTukar" onclick="swapPositionTeam2()">Tukar</button></div>
   </div>
 
 
@@ -355,8 +355,13 @@ skorTeam1 = 0;
 skorTeam2 = 0;
 team1Serving = true;
 document.getElementById("TeamALabel").style.background = "forestgreen";
+document.getElementById("rightPlayerTeam2Img").style.border = "5px solid forestgreen";
+document.getElementById("leftPlayerTeam2Img").style.width = "90%";
+document.getElementById("leftPlayerTeam2Img").style.height = "40%";
 team2Serving = false;
-
+document.getElementById("rightPlayerTeam1Img").style.border = "5px solid forestgreen";
+document.getElementById("leftPlayerTeam1Img").style.width = "90%";
+document.getElementById("leftPlayerTeam1Img").style.height = "40%";
 </script>
 
 <div class="footer">
