@@ -229,7 +229,16 @@ function plus1Team1() {
   }
   team1Serving = true;
   document.getElementById("TeamALabel").style.background = "forestgreen";
-  
+  if (skorTeam1%2==0){
+    increaseSizeRightPlayerCrossImages();
+    decreaseSizeLeftPlayerCrossImages();
+  }
+  else
+  {
+    increaseSizeLeftPlayerCrossImages();
+    decreaseSizeRightPlayerCrossImages();
+  }
+
   team2Serving = false;
   document.getElementById("TeamBLabel").style.background = "grey";
 }
@@ -245,6 +254,16 @@ function minus1Team1() {
   var rightPlayer = document.getElementById("rightPlayerTeam1Img").src;
   document.getElementById("leftPlayerTeam1Img").src = rightPlayer;
   document.getElementById("rightPlayerTeam1Img").src = leftPlayer;
+
+  if (skorTeam1%2==0){
+    increaseSizeRightPlayerCrossImages();
+    decreaseSizeLeftPlayerCrossImages();
+  }
+  else
+  {
+    increaseSizeLeftPlayerCrossImages();
+    decreaseSizeRightPlayerCrossImages();
+  }
 }
 function plus1Team2() {
   skorTeam2 += 1;
@@ -266,6 +285,16 @@ function plus1Team2() {
 
   team1Serving = false;
   document.getElementById("TeamALabel").style.background = "grey";
+
+  if (skorTeam2%2==0){
+    increaseSizeRightPlayerCrossImages();
+    decreaseSizeLeftPlayerCrossImages();
+  }
+  else
+  {
+    increaseSizeLeftPlayerCrossImages();
+    decreaseSizeRightPlayerCrossImages();
+  }
 }
 function minus1Team2() {
   skorTeam2 -= 1;
@@ -278,6 +307,15 @@ function minus1Team2() {
   var rightPlayer = document.getElementById("rightPlayerTeam2Img").src;
   document.getElementById("leftPlayerTeam2Img").src = rightPlayer;
   document.getElementById("rightPlayerTeam2Img").src = leftPlayer;
+  if (skorTeam2%2==0){
+    increaseSizeRightPlayerCrossImages();
+    decreaseSizeLeftPlayerCrossImages();
+  }
+  else
+  {
+    increaseSizeLeftPlayerCrossImages();
+    decreaseSizeRightPlayerCrossImages();
+  }
 }
 function toggleViewPlayers() {
   var x = document.getElementById("membersDiv");
@@ -347,6 +385,51 @@ function swapPositionTeam2(){
   document.getElementById("leftPlayerTeam2Img").src = rightPlayer;
   document.getElementById("rightPlayerTeam2Img").src = leftPlayer;
 }
+
+function decreaseSizeRightPlayerCrossImages()
+{
+  document.getElementById("rightPlayerTeam1Img").style.border = "5px solid grey";
+  document.getElementById("rightPlayerTeam1Img").style.width = "90%";
+  document.getElementById("rightPlayerTeam1Img").style.height = "40%";
+
+  document.getElementById("rightPlayerTeam2Img").style.width = "90%";
+  document.getElementById("rightPlayerTeam2Img").style.border = "5px solid grey";
+  document.getElementById("rightPlayerTeam2Img").style.height = "40%";
+}
+
+function decreaseSizeLeftPlayerCrossImages()
+{
+  document.getElementById("leftPlayerTeam1Img").style.border = "5px solid grey";
+  document.getElementById("leftPlayerTeam1Img").style.width = "90%";
+  document.getElementById("leftPlayerTeam1Img").style.height = "40%";
+
+  document.getElementById("leftPlayerTeam2Img").style.width = "90%";
+  document.getElementById("leftPlayerTeam2Img").style.border = "5px solid grey";
+  document.getElementById("leftPlayerTeam2Img").style.height = "40%";
+}
+
+function increaseSizeRightPlayerCrossImages()
+{
+  document.getElementById("rightPlayerTeam1Img").style.border = "5px solid forestgreen";
+  document.getElementById("rightPlayerTeam1Img").style.width = "95%";
+  document.getElementById("rightPlayerTeam1Img").style.height = "45%";
+
+  document.getElementById("rightPlayerTeam2Img").style.width = "95%";
+  document.getElementById("rightPlayerTeam2Img").style.border = "5px solid forestgreen";
+  document.getElementById("rightPlayerTeam2Img").style.height = "45%";
+}
+
+function increaseSizeLeftPlayerCrossImages()
+{
+  document.getElementById("leftPlayerTeam1Img").style.border = "5px solid forestgreen";
+  document.getElementById("leftPlayerTeam1Img").style.width = "95%";
+  document.getElementById("leftPlayerTeam1Img").style.height = "45%";
+
+  document.getElementById("leftPlayerTeam2Img").style.width = "95%";
+  document.getElementById("leftPlayerTeam2Img").style.border = "5px solid forestgreen";
+  document.getElementById("leftPlayerTeam2Img").style.height = "45%";
+}
+
 player1Team1 = "bob.jpeg";
 player2Team1 = "bob.jpeg";
 player1Team2 = "ayam.jpeg";
@@ -355,13 +438,11 @@ skorTeam1 = 0;
 skorTeam2 = 0;
 team1Serving = true;
 document.getElementById("TeamALabel").style.background = "forestgreen";
-document.getElementById("rightPlayerTeam2Img").style.border = "5px solid forestgreen";
-document.getElementById("leftPlayerTeam2Img").style.width = "90%";
-document.getElementById("leftPlayerTeam2Img").style.height = "40%";
+increaseSizeRightPlayerCrossImages();
+
 team2Serving = false;
-document.getElementById("rightPlayerTeam1Img").style.border = "5px solid forestgreen";
-document.getElementById("leftPlayerTeam1Img").style.width = "90%";
-document.getElementById("leftPlayerTeam1Img").style.height = "40%";
+decreaseSizeLeftPlayerCrossImages();
+
 </script>
 
 <div class="footer">
